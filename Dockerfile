@@ -17,6 +17,7 @@ COPY . .
 RUN bun run build
 
 FROM base AS runner
+RUN apk add ffmpeg
 WORKDIR /app
 
 ENV NODE_ENV=production
